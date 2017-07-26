@@ -1,0 +1,50 @@
+#|
+How to deal with tag pairs occuring multiple times
+
+How do access the surrounding of the tag easily
+|#
+
+(def-logical-directory 
+  "web-project-dir;" 
+  "Projects:Quantization:Perception study:I3-G19 Data:00-web-demo:")
+
+(file->string
+ (format NIL "~Aresponse dummy.html"
+         (directory-namestring *loading-file-source-file*)))
+
+(let ((input (file->string
+              (format NIL "~Aresponse dummy.html"
+                      (directory-namestring 
+                       *loading-file-source-file*)))))
+  (find-string-within-tags "<!-- img -->" "<!-- /img -->" input))
+    
+
+
+
+(let ((integers ("1-1-1" "1-1-2" "1-1-3"))
+
+
+
+(find-string-within-tags "<!-- integers -->" "<!-- /integers -->"
+                         (file->string
+                          (format NIL "~Aresponse dummy.html"
+                                  (directory-namestring 
+                                   *loading-file-source-file*)))
+                         :start 404)
+
+
+
+(defun ioi-string (integers tempo)
+  (format nil "[~{~3$~^ ~}]"
+          (loop with sum = (apply #'+ integers)
+                for interval in integers 
+                collect (* (/ 60 tempo sum) interval))))
+
+(defun list-tagged-and-position (&rest args)
+  (multiple-value-bind (string position)
+                       (apply #'find-string-within-tags args)
+    (list string position)))
+                                
+
+
+; (ioi-string '(1 1 1) 60)
