@@ -1,0 +1,1068 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="cludg.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>
+string-tools</title>
+</head>
+<body>
+<div id="navbar">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+<colgroup span="3">
+<col width="0*"/>
+<col width="0*"/>
+<col width="1*"/>
+</colgroup>
+<tr>
+<td align="left" valign="baseline">
+<a href="make-package.html">
+Prev:&nbsp;make-package</a>
+<br/>
+<a href="export.html">
+Next:&nbsp;export</a>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="left" valign="baseline">
+<span class="upchain">
+<b>
+string-tools</b>
+<br/>
+<a href="index.html">
+Index</a>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="cludg-doc-body">
+<h2>
+string-tools
+</h2>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Method summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238801">
+all-start-end-positions</a>
+</td>
+<td class="summary">
+(start-tag string) (end-tag string) (string string) <em>&amp;key</em> (case-sensitive nil)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238786">
+all-string-positions</a>
+</td>
+<td class="summary">
+(item string) (string string) <em>&amp;rest</em> key-args <em>&amp;key</em> (start 0) accum <em>&amp;allow-other-keys</em></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238796">
+find-first-in-string</a>
+</td>
+<td class="summary">
+(items list) (string string) <em>&amp;rest</em> key-args</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238791">
+find-string-after</a>
+</td>
+<td class="summary">
+(item string) (string string) <em>&amp;rest</em> key-args</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238790">
+find-string-before</a>
+</td>
+<td class="summary">
+(item string) (string string) <em>&amp;rest</em> key-args</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238800">
+find-string-within-tags</a>
+</td>
+<td class="summary">
+(start-tag string) (end-tag string) (string string) <em>&amp;key</em> (start 0) (end (length string)) (case-sensitive? nil)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238798">
+indent-string</a>
+</td>
+<td class="summary">
+(string string) (n integer)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238793">
+insert-in-string</a>
+</td>
+<td class="summary">
+(item string) (string string) (position integer)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238794">
+insert-in-string</a>
+</td>
+<td class="summary">
+(items list) (string string) (positions list)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238795">
+remove-within-positions</a>
+</td>
+<td class="summary">
+(string string) (start integer) (end integer)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238792">
+split-string</a>
+</td>
+<td class="summary">
+(separator character) (string string) <em>&amp;rest</em> key-args <em>&amp;key</em> (start 0) <em>&amp;allow-other-keys</em></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238789">
+string-count</a>
+</td>
+<td class="summary">
+(item string) (string string) <em>&amp;rest</em> key-args <em>&amp;key</em> (start 0) (end (length string)) <em>&amp;allow-other-keys</em></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238787">
+string-find</a>
+</td>
+<td class="summary">
+(item string) (string string) <em>&amp;rest</em> key-args</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238785">
+string-position</a>
+</td>
+<td class="summary">
+(item string) (string string) <em>&amp;rest</em> key-args <em>&amp;key</em> (start 0) (end (length string)) <em>&amp;allow-other-keys</em></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238788">
+string-remove</a>
+</td>
+<td class="summary">
+(item string) (string string) <em>&amp;rest</em> key-args <em>&amp;key</em> (count nil) (end (length string)) <em>&amp;allow-other-keys</em></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238797">
+white-space</a>
+</td>
+<td class="summary">
+(n integer)</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Function summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238802">
+all-start-end-positions-aux</a>
+</td>
+<td class="summary">
+start-positions end-positions <em>&amp;key</em> following-start start-tag (following-end (first start-positions)) accum</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238781">
+file-&gt;string</a>
+</td>
+<td class="summary">
+filename</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238784">
+pprint-to-file</a>
+</td>
+<td class="summary">
+path expr</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238782">
+read-lisp-file</a>
+</td>
+<td class="summary">
+path</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238804">
+remove-keyargs</a>
+</td>
+<td class="summary">
+to-remove key-args</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238803">
+remove-property</a>
+</td>
+<td class="summary">
+property property-list</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238799">
+stringify</a>
+</td>
+<td class="summary">
+thing</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Macro summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-tools.html#_g238783">
+format-to-file</a>
+</td>
+<td class="summary">
+path format-string <em>&amp;rest</em> format-args</td>
+</tr>
+</table>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238785">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+string-position&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(item string) (string string) <em>&amp;rest</em> key-args <em>&amp;key</em> (start 0) (end (length string)) <em>&amp;allow-other-keys</em></td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the index of the item string if it occurs completly in string, NIL otherwise. 
+ Understands keyargs <span class="keyword">
+:start, </span>
+<span class="keyword">
+:end, </span>
+<span class="keyword">
+:from-end </span>
+<span class="keyword">
+:key </span>
+<span class="keyword">
+:test </span>
+<span class="keyword">
+:test-not. </span>
+<span class="keyword">
+:start </span>
+and <span class="keyword">
+:end </span>
+are related to string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238786">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+all-string-positions&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(item string) (string string) <em>&amp;rest</em> key-args <em>&amp;key</em> (start 0) accum <em>&amp;allow-other-keys</em></td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns all start positions of item in string if it occurs completly in string, NIL otherwise. 
+ Understands keyargs <span class="keyword">
+:start, </span>
+<span class="keyword">
+:end, </span>
+<span class="keyword">
+:from-end </span>
+(?) <span class="keyword">
+:key </span>
+<span class="keyword">
+:test </span>
+<span class="keyword">
+:test-not. </span>
+<span class="keyword">
+:start </span>
+and <span class="keyword">
+:end </span>
+are related to string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238787">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+string-find&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(item string) (string string) <em>&amp;rest</em> key-args</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the first found substring in string matching item. 
+ Understands keyargs <span class="keyword">
+:start, </span>
+<span class="keyword">
+:end, </span>
+<span class="keyword">
+:from-end </span>
+<span class="keyword">
+:key </span>
+<span class="keyword">
+:test </span>
+<span class="keyword">
+:test-not. </span>
+<span class="keyword">
+:start </span>
+and <span class="keyword">
+:end </span>
+are related to string. 
+ Current limitation: the returned substring always has the same length as item, regardless <span class="keyword">
+:test, </span>
+<span class="keyword">
+:test-not </span>
+or <span class="keyword">
+:key </span>
+
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238788">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+string-remove&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(item string) (string string) <em>&amp;rest</em> key-args <em>&amp;key</em> (count nil) (end (length string)) <em>&amp;allow-other-keys</em></td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a string like string but without substrings matching item. If count is given only the first count occurences are removed. 
+ Understands keyargs <span class="keyword">
+:start, </span>
+<span class="keyword">
+:end, </span>
+<span class="keyword">
+:from-end </span>
+<span class="keyword">
+:key </span>
+<span class="keyword">
+:test </span>
+<span class="keyword">
+:test-not. </span>
+<span class="keyword">
+:start </span>
+and <span class="keyword">
+:end </span>
+are related to string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238789">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+string-count&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(item string) (string string) <em>&amp;rest</em> key-args <em>&amp;key</em> (start 0) (end (length string)) <em>&amp;allow-other-keys</em></td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the number of substrings in string matching item. 
+ Understands keyargs <span class="keyword">
+:start, </span>
+<span class="keyword">
+:end, </span>
+<span class="keyword">
+:from-end </span>
+<span class="keyword">
+:key </span>
+<span class="keyword">
+:test </span>
+<span class="keyword">
+:test-not. </span>
+<span class="keyword">
+:start </span>
+and <span class="keyword">
+:end </span>
+are related to string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238790">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+find-string-before&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(item string) (string string) <em>&amp;rest</em> key-args</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns substring of string before the first substring matching item encounters in string. 
+ Understands keyargs <span class="keyword">
+:start, </span>
+<span class="keyword">
+:end, </span>
+<span class="keyword">
+:from-end </span>
+<span class="keyword">
+:key </span>
+<span class="keyword">
+:test </span>
+<span class="keyword">
+:test-not. </span>
+<span class="keyword">
+:start </span>
+and <span class="keyword">
+:end </span>
+are related to string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238791">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+find-string-after&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(item string) (string string) <em>&amp;rest</em> key-args</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns substring of string after the first substring matching item encounters in string. 
+ Understands keyargs <span class="keyword">
+:start, </span>
+<span class="keyword">
+:end, </span>
+<span class="keyword">
+:from-end </span>
+<span class="keyword">
+:key </span>
+<span class="keyword">
+:test </span>
+<span class="keyword">
+:test-not. </span>
+<span class="keyword">
+:start </span>
+and <span class="keyword">
+:end </span>
+are related to string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238792">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+split-string&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(separator character) (string string) <em>&amp;rest</em> key-args <em>&amp;key</em> (start 0) <em>&amp;allow-other-keys</em></td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Splits string in a list of substrings at the given separator character (leaving separator out). 
+ Understands keyargs <span class="keyword">
+:start, </span>
+<span class="keyword">
+:end, </span>
+<span class="keyword">
+:from-end </span>
+<span class="keyword">
+:key </span>
+<span class="keyword">
+:test </span>
+<span class="keyword">
+:test-not. </span>
+<span class="keyword">
+:start </span>
+and <span class="keyword">
+:end </span>
+are related to string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238793">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+insert-in-string&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(item string) (string string) (position integer)</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Inserts item in string before position, returns an extended copy of string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238794">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+insert-in-string&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(items list) (string string) (positions list)</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Inserts items in string before positions (in original string), returns an extended copy of string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238795">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+remove-within-positions&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(string string) (start integer) (end integer)</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Removes substring from start to before end out of string 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238796">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+find-first-in-string&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(items list) (string string) <em>&amp;rest</em> key-args</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the first items string found in string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238797">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+white-space&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(n integer)</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Outputs a string of n white spaces 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238798">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+indent-string&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(string string) (n integer)</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Inserts n white spaces at the beginning and before each new line of string 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238800">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+find-string-within-tags&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(start-tag string) (end-tag string) (string string) <em>&amp;key</em> (start 0) (end (length string)) (case-sensitive? nil)</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns substring of string embraced by the start and end tag, excluding these tags. 
+ Second return value is the list of start and end position of the embraced string inside string, including the tags. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238801">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+all-start-end-positions&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(start-tag string) (end-tag string) (string string) <em>&amp;key</em> (case-sensitive nil)</td>
+<td class="symbol-type">
+&nbsp;[Method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns all start end position pairs of start-tag/end-tag in string, NIL otherwise. 
+ The same tag pairs may occure several times, one after another or nested. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238781">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+file-&gt;string&nbsp;&nbsp;</td>
+<td class="lambda-list">
+filename</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Reads the content of a file and returns it as a string 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238782">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+read-lisp-file&nbsp;&nbsp;</td>
+<td class="lambda-list">
+path</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Expects a path name to a lisp file and returns the read (but not evaluated) content of the file. For example, if the file contains (1 2 3) then the list (1 2 3) is return (i.e., not a string, but a list, but 1 is not called as a function). Note that only the 1st Lisp form in path is returned. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238784">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+pprint-to-file&nbsp;&nbsp;</td>
+<td class="lambda-list">
+path expr</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Pretty-prints to the given path. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238799">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+stringify&nbsp;&nbsp;</td>
+<td class="lambda-list">
+thing</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a string surrounded by escaped double quotes 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238802">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+all-start-end-positions-aux&nbsp;&nbsp;</td>
+<td class="lambda-list">
+start-positions end-positions <em>&amp;key</em> following-start start-tag (following-end (first start-positions)) accum</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238803">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+remove-property&nbsp;&nbsp;</td>
+<td class="lambda-list">
+property property-list</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Removes a property and its value out of a property list 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238804">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+remove-keyargs&nbsp;&nbsp;</td>
+<td class="lambda-list">
+to-remove key-args</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g238783">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+format-to-file&nbsp;&nbsp;</td>
+<td class="lambda-list">
+path format-string <em>&amp;rest</em> format-args</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Saves a formatstring and it's args to the given path. 
+ </p>
+</div>
+</div>
+</div>
+<div class="cludg-footer">
+Generated by&nbsp;<a href="mailto:ihatchondo@common-lisp.net" lang="en">
+CLDOC</a>
+- 2017-07-26 19:04:33</div>
+</body>
+</html>
