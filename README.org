@@ -1,0 +1,6 @@
+* string-tools
+
+This [[https://common-lisp.net/project/asdf/][ASDF]] system defines a collection of definitions for processing strings and files. I created this collection back in 2000 primarily for automatically generating [[http://www.nici.ru.nl/mmm/quantization-demo/01-frame-sets/collected.html][static HTML files based on HTML template files containing Lisp code that was replaced by the result of their evaluation]] (the introduction to this demo is [[http://www.nici.ru.nl/mmm/quantization-demo/index.html][here]]). 
+
+Nowadays there are better tools for doing such things, but I am still using some of my tools contained here.  
+
