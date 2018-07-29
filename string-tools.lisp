@@ -50,6 +50,8 @@
   path)
 
 
+#| ;; commented because of dependency on string-replace, which in turn depends on system copy. And I don't really need this anymore on OS X nowadays...
+
 (let* ((unix-delimiter "/")
        (mac-delimiter ":"))
   (defun unix-to-mac-path (unix-path-string)
@@ -83,6 +85,7 @@
   (defun mac-to-unix-string (string)
     (string-replace string mac unix)))
 
+|#
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
@@ -169,7 +172,7 @@ Understands keyargs :start, :end, :from-end :key :test :test-not. :start and :en
 ; (string-count "TEST" "test das ist ein test string test" :test #'string-equal)
 
 
-#| Tomporary commented -- when needed, first repair ASDF system copy-objects
+#| Temporary commented -- when needed, first repair ASDF system copy-objects
 (defun string-replace (string old-string new-string &rest key-args
 			      &key (start 0)  &allow-other-keys)
   "Returns string by replacing occurences of old-string with new-string. Understands keyargs :start, :end, :from-end (?) :key :test :test-not. :start and :end are related to string."
